@@ -20,13 +20,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [BarangController::class, 'home'])->name('home');
+Route::get('/home', [BarangController::class, 'home'])->name('home')->middleware('auth');
 
 Route::get('/form-tambah', function () {
     return view('form-tambah');
 });
-Route::post('/tambah', [BarangController::class, 'tambah']);
-Route::get('/hapus-brg/{id}', [BarangController::class, 'hapus']);
-Route::get('/ubah-brg/{id}', [BarangController::class, 'formUbah']);
-Route::post('/ubah-brg', [BarangController::class, 'ubah']);
+Route::post('/tambah', [BarangController::class, 'tambah'])->middleware('auth');
+Route::get('/hapus-brg/{id}', [BarangController::class, 'hapus'])->middleware('auth');
+Route::get('/ubah-brg/{id}', [BarangController::class, 'formUbah'])->middleware('auth');
+Route::post('/ubah-brg', [BarangController::class, 'ubah'])->middleware('auth');
 Route::get('/download-pdf', [BarangController::class, 'downloadPDF']);
