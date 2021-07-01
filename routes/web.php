@@ -24,7 +24,7 @@ Route::get('/home', [BarangController::class, 'home'])->name('home')->middleware
 
 Route::get('/form-tambah', function () {
     return view('form-tambah');
-});
+})->middleware('auth');
 Route::post('/tambah', [BarangController::class, 'tambah'])->middleware('auth');
 Route::get('/hapus-brg/{id}', [BarangController::class, 'hapus'])->middleware('auth');
 Route::get('/ubah-brg/{id}', [BarangController::class, 'formUbah'])->middleware('auth');
