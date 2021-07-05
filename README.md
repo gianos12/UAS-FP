@@ -3,4 +3,4 @@ Amaliyah Gian Fadilah </br>
 6C </br>
 
 Project heroku : http://uas-amal.herokuapp.com/home    </br>
-Penjelasan UAS : https://github.com/gianos12/ExplanationFP-UAS
+Penjelasan UAS : https://github.com/gianos12/PenjelasanUAS-FP
